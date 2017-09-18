@@ -12,7 +12,7 @@ export class RecipesService {
     new Recipe(
       'Tasty Schnitzel',
       'A super-tasty Schnitzel - just awesome!',
-      'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-09.jpg',
+      'https://www.daringgourmet.com/wp-content/uploads/2014/03/Schnitzel-7_edited.jpg',
       [
         new Ingredient('Meat', 1),
         new Ingredient('French Fries', 1)
@@ -20,7 +20,7 @@ export class RecipesService {
     new Recipe(
       'Big Fat Burger',
       'What else you need to say ?',
-      'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-09.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Big_Mac_hamburger.jpg/220px-Big_Mac_hamburger.jpg',
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1)
@@ -38,5 +38,9 @@ export class RecipesService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
+  }
+
+  getRecipe(index: number): Recipe {
+    return this.recipes[index];
   }
 }
